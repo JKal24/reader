@@ -4,6 +4,7 @@ import Login from "../screens/Login";
 import { useSelector } from "react-redux";
 import { RootState } from "../lib/store";
 import BookOverview from "../screens/BookOverview";
+import Register from "../screens/Register";
 
 const Stack = createNativeStackNavigator();
 
@@ -31,8 +32,8 @@ export function AuthNavigation() {
     return (
         <Stack.Navigator screenOptions={{ headerShown: false }} >
             {/* <Stack.Screen name="welcome" component={Welcome} /> */}
+            <Stack.Screen name="Register" component={Register} />
             <Stack.Screen name="Login" component={Login} />
-            {/* <Stack.Screen name="signUp" component={SignUp} /> */}
         </Stack.Navigator>
     )
 }

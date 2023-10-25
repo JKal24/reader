@@ -8,16 +8,16 @@ import navigation from '../../navigation'
 
 export default function Login() {
 
-    const [secure, setSecure] = useState<boolean>(true)
-    
     const navigation = useNavigation()
     const styles = useStyles()
     const {
         control,
         handleSubmit,
-        formState: { errors },
+        formState: { errors }
     } = useForm()
 
+    const [secure, setSecure] = useState<boolean>(true)
+    
     const validate = (text: string) => {
         const reg = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w\w+)+$/
         return reg.test(text)
