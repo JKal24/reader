@@ -7,7 +7,7 @@ interface UserInfo {
 }
 
 const initialState: UserInfo = {
-    id: "", token: "", loggedIn: false
+    id: "", token: "", loggedIn: true
 }
 
 const userSlice = createSlice({

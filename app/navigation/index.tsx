@@ -3,7 +3,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import Login from "../screens/Login";
 import { useSelector } from "react-redux";
 import { RootState } from "../lib/store";
-import BookOverview from "../screens/BookOverview";
+import Bookshelf from "../screens/Bookshelf";
 import Register from "../screens/Register";
 
 const Stack = createNativeStackNavigator();
@@ -40,8 +40,8 @@ export function AuthNavigation() {
 
 export function AppNavigation() {
     return (
-        <Stack.Navigator>
-            <Stack.Screen name="BookOverview" component={BookOverview} />
+        <Stack.Navigator screenOptions={{ headerShown: false }} >
+            <Stack.Screen name="Bookshelf" component={Bookshelf} />
         </Stack.Navigator>
     )
 }
