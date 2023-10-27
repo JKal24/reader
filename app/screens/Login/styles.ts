@@ -20,8 +20,7 @@ export const useStyles = () => {
             marginTop: height('-2%'),
             alignSelf: 'center',
             justifyContent: 'center',
-            paddingTop: 20,
-            paddingBottom: 20
+            padding: 15
         },
         logInText: {
             fontSize: 30,
@@ -30,12 +29,13 @@ export const useStyles = () => {
             justifyContent: 'center',
             color: '#3A3B3C',
         },
-        emailInput: {
-            alignSelf: 'center',
-            borderRadius: 20,
-            margin: 5,
-            backgroundColor: 'white',
-            width: width('60%'),
+        input: {
+            backgroundColor: "rgb(245, 245, 245)",
+            marginTop: 10,
+            marginBottom: 10,
+            borderWidth: 1,
+            width: '100%',
+            padding: 5
         },
         passwordView: {
             flexDirection: 'row',
@@ -46,13 +46,6 @@ export const useStyles = () => {
             height: 50,
             marginTop: 5,
             alignSelf: 'center',
-        },
-        passwordInput: {
-            alignSelf: 'center',
-            borderRadius: 20,
-            margin: 5,
-            backgroundColor: 'white',
-            width: width('60%'),
         },
         errorMessage: { alignSelf: 'center', color: 'red' },
         status: {
@@ -66,6 +59,7 @@ export const useStyles = () => {
             justifyContent: 'space-between',
             flexDirection: 'row',
             marginTop: 15,
+            marginBottom: 10,
             borderRadius: 20,
         },
         basicText: {

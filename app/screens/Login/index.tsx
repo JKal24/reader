@@ -45,7 +45,7 @@ export default function Login() {
                                 textContentType="emailAddress"
                                 keyboardType="email-address"
                                 autoCorrect={false}
-                                style={styles.emailInput}
+                                style={styles.input}
                                 value={value}
                                 onChangeText={(text) => onChange(text)}
                             />
@@ -59,28 +59,26 @@ export default function Login() {
                         </Text>
                     ) : null}
 
-                    <View style={styles.passwordView}>
-                        <Controller
-                            control={control}
-                            rules={{
-                                required: true,
-                            }}
-                            render={({ field: { onChange, value } }) => (
-                                <TextInput
-                                    testID={'password'}
-                                    placeholder={'Enter your password'}
-                                    autoCapitalize="none"
-                                    secureTextEntry={secure}
-                                    autoCorrect={false}
-                                    style={styles.passwordInput}
-                                    value={value}
-                                    onChangeText={(text) => onChange(text)}
-                                />
-                            )}
-                            name="password"
-                            defaultValue=""
-                        />
-                    </View>
+                    <Controller
+                        control={control}
+                        rules={{
+                            required: true,
+                        }}
+                        render={({ field: { onChange, value } }) => (
+                            <TextInput
+                                testID={'password'}
+                                placeholder={'Enter your password'}
+                                autoCapitalize="none"
+                                secureTextEntry={secure}
+                                autoCorrect={false}
+                                style={styles.input}
+                                value={value}
+                                onChangeText={(text) => onChange(text)}
+                            />
+                        )}
+                        name="password"
+                        defaultValue=""
+                    />
                     {errors.password ? (
                         <Text style={styles.errorMessage}>Password is required</Text>
                     ) : null}
@@ -99,7 +97,7 @@ export default function Login() {
                         testID={'signup'}
                         style={styles.status}
                         onPress={() => {
-                            navigation.navigate('Signup' as never)
+                            navigation.navigate('Register' as never)
                         }}>
                         Sign up
                     </Text>
