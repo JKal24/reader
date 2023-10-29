@@ -1,6 +1,5 @@
 import { StyleSheet } from 'react-native';
 import { getHeight, getWidth } from '../../utils/dimensions';
-import AppStyles from '../../utils/styles';
 
 export const useStyles = () => {
     const height = getHeight();
